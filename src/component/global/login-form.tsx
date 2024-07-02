@@ -44,11 +44,11 @@ export default function LoginForm() {
                 name="username"
                 render={() => (
                   <FormItem>
-                    <FormLabel>Username/Phone</FormLabel>
                     <FormControl>
                       <Input
                         type="text"
-                        className="!border-b !p-0 m-0 h-0 rounded-none border-b-[#e6e5e5] border-0"
+                        placeholder="Username/Phone"
+                        className="!border-b py-5 px-0 !outline-none focus-within:outline-none focus-visible:ring-0 m-0 h-0 rounded-none border-b-[#e6e5e5] border-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -60,12 +60,11 @@ export default function LoginForm() {
                 name="password"
                 render={() => (
                   <FormItem>
-                    <FormLabel>Password</FormLabel>
                     <FormControl>
                       <Input
                         type="password"
-                        className="!border-b !p-0 m-0 h-0 rounded-none border-b-[#e6e5e5] border-0"
                         placeholder="Password"
+                        className="!border-b !py-5 px-0 m-0 h-0 !outline-none focus-within:outline-none focus-visible:ring-0 rounded-none border-b-[#e6e5e5] border-0"
                       />
                     </FormControl>
                     <FormMessage />
