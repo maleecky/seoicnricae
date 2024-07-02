@@ -14,6 +14,7 @@ import * as z from "zod";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const FormSchema = z.object({
   username: z.string().min(1),
@@ -31,7 +32,7 @@ export default function LoginForm() {
   const submitHandler = () => {};
   return (
     <div className="bg-gray-200 flex justify-center w-full items-center">
-      <div className="  bg-white py-12 w-full">
+      <div className="  bg-white pt-12 w-full">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(submitHandler)}
@@ -103,6 +104,11 @@ export default function LoginForm() {
             </Dialog>
           </form>
         </Form>
+        <div className="flex items-center justify-center">
+          <Button variant={"ghost"} className="text-[#838383]">
+            <Link href="#">Don&apos;t have an accout? Create now!</Link>
+          </Button>
+        </div>
       </div>
     </div>
   );

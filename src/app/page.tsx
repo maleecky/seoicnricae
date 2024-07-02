@@ -7,18 +7,22 @@ import LoginForm from "@/component/global/login-form";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen max-w-[800px] w-full m-auto flex-col items-center justify-between py-24">
+    <main className="flex min-h-screen max-w-[680px] w-full m-auto flex-col items-center justify-between py-24">
       <div>
-        <Image src={logo} height={100} width={100} alt="logo" />
+        <Image src={logo} height={200} width={200} alt="logo" />
       </div>
 
       <LoginForm />
       <div className="flex flex-col w-full gap-3 items-center">
-        <h3>Create Account</h3>
-        <div>Or use the following way to log in</div>
-        <div className="flex gap-10 items-center">
+        <h3 className="font-semibold">Create Account</h3>
+        <div className="w-full text-[#838383] justify-center whitespace-nowrap items-center flex">
+          <div className="w-full bg-[#ababab] h-[1px] mr-4"></div>
+          Or use the following way to log in
+          <div className="w-full bg-[#ababab] h-[1px] ml-4"></div>
+        </div>
+        <div className="flex gap-10 w-full items-center">
           <Button
-            className="bg-transparent hover:bg-transparent border border-[#93cee0] text-[#93cee0] "
+            className="bg-transparent flex justify-start  w-full hover:bg-transparent border border-[#93cee0] text-[#93cee0] "
             asChild
           >
             <Link href="#">
@@ -55,7 +59,7 @@ export default function Home() {
             </Link>
           </Button>
           <Button
-            className="bg-transparent hover:bg-transparent border border-[#93cee0] text-[#93cee0] "
+            className="bg-transparent flex justify-start w-full hover:bg-transparent border border-[#93cee0] text-[#93cee0] "
             asChild
           >
             <Link href="#">
@@ -82,7 +86,7 @@ export default function Home() {
           </Button>
         </div>
         <Button
-          className="bg-transparent hover:bg-transparent border border-[#93cee0] text-[#181919] "
+          className="bg-transparent w-full hover:bg-transparent border border-[#93cee0] text-[#181919] "
           asChild
         >
           <Link href="#">
@@ -102,8 +106,8 @@ export default function Home() {
           </Link>
         </Button>
 
-        <div>
-          <Button variant={"ghost"}>
+        <div className="w-full flex items-center justify-between">
+          <Button className="p-0" variant={"ghost"}>
             <svg
               width="24"
               height="24"
