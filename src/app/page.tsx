@@ -107,7 +107,7 @@ export default function Home() {
         </Button>
 
         <div className="w-full flex items-center justify-between">
-          <Button className="p-0" variant={"ghost"}>
+          <Button className="p-0 hover:bg-transparent" variant={"ghost"}>
             <svg
               width="24"
               height="24"

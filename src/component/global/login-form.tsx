@@ -105,7 +105,10 @@ export default function LoginForm() {
           </form>
         </Form>
         <div className="flex items-center justify-center">
-          <Button variant={"ghost"} className="text-[#838383]">
+          <Button
+            variant={"ghost"}
+            className="text-[#838383] hover:bg-transparent"
+          >
             <Link href="#">Don&apos;t have an accout? Create now!</Link>
           </Button>
         </div>
