@@ -1,112 +1,133 @@
+import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
 import Image from "next/image";
+import Link from "next/link";
+import logo from "@/../public/LOGO.svg";
+import LoginForm from "@/component/global/login-form";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div>
+        <Image src={logo} height={100} width={100} alt="logo" />
+      </div>
+
+      <LoginForm />
+      <div className="flex flex-col gap-3 items-center">
+        <h3>Create Account</h3>
+        <div>Or use the following way to log in</div>
+        <div className="flex gap-10 items-center">
+          <Button
+            className="bg-transparent hover:bg-transparent border border-[#93cee0] text-[#93cee0] "
+            asChild
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <Link href="#">
+              <svg
+                width="128"
+                height="128"
+                viewBox="0 0 128 128"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 mr-3"
+              >
+                <path
+                  d="M44.5899 4.20998C31.8008 8.64667 20.7714 17.0676 13.1219 28.236C5.47233 39.4044 1.60586 52.7314 2.09037 66.2596C2.57488 79.7879 7.38483 92.8042 15.8137 103.397C24.2426 113.989 35.8461 121.6 48.9199 125.11C59.5192 127.845 70.624 127.965 81.2799 125.46C90.9331 123.292 99.8578 118.654 107.18 112C114.801 104.863 120.332 95.7848 123.18 85.74C126.275 74.8167 126.826 63.3293 124.79 52.16H65.2699V76.85H99.7399C99.051 80.7879 97.5748 84.5463 95.3994 87.9003C93.2241 91.2543 90.3945 94.135 87.0799 96.37C82.8708 99.1543 78.1259 101.028 73.1499 101.87C68.1594 102.798 63.0405 102.798 58.0499 101.87C52.9918 100.824 48.2069 98.7366 43.9999 95.74C37.2414 90.9559 32.1667 84.1592 29.4999 76.32C26.7881 68.3339 26.7881 59.676 29.4999 51.69C31.3982 46.0921 34.5363 40.9953 38.6799 36.78C43.4219 31.8675 49.4253 28.3559 56.0315 26.6307C62.6377 24.9055 69.5915 25.0333 76.1299 27C81.2376 28.5679 85.9084 31.3074 89.7699 35C93.6566 31.1333 97.5366 27.2566 101.41 23.37C103.41 21.28 105.59 19.29 107.56 17.15C101.666 11.6647 94.7468 7.39655 87.1999 4.58998C73.457 -0.40012 58.4197 -0.534225 44.5899 4.20998Z"
+                  fill="white"
+                />
+                <path
+                  d="M44.59 4.20996C58.4186 -0.537472 73.4559 -0.406898 87.2 4.57996C94.7482 7.40559 101.664 11.6943 107.55 17.2C105.55 19.34 103.44 21.34 101.4 23.42C97.52 27.2933 93.6433 31.1533 89.77 35C85.9085 31.3073 81.2377 28.5679 76.13 27C69.5938 25.0264 62.6402 24.8912 56.0322 26.6094C49.4242 28.3275 43.4171 31.8326 38.67 36.74C34.5263 40.9553 31.3883 46.0521 29.49 51.65L8.76001 35.6C16.1801 20.8856 29.0275 9.6302 44.59 4.20996Z"
+                  fill="#E33629"
+                />
+                <path
+                  d="M3.25999 51.5001C4.3742 45.978 6.22403 40.6304 8.75999 35.6001L29.49 51.6901C26.7781 59.6762 26.7781 68.334 29.49 76.3201C22.5833 81.6534 15.6733 87.0134 8.75999 92.4001C2.4115 79.7633 0.475318 65.3651 3.25999 51.5001Z"
+                  fill="#F8BD00"
+                />
+                <path
+                  d="M65.2701 52.1499H124.79C126.826 63.3192 126.275 74.8066 123.18 85.7299C120.332 95.7747 114.801 104.853 107.18 111.99C100.49 106.77 93.7701 101.59 87.0801 96.3699C90.3968 94.1327 93.2278 91.2488 95.4032 87.8912C97.5786 84.5336 99.0537 80.7713 99.7401 76.8299H65.2701C65.2601 68.6099 65.2701 60.3799 65.2701 52.1499Z"
+                  fill="#587DBD"
+                />
+                <path
+                  d="M8.75 92.4001C15.6633 87.0667 22.5733 81.7067 29.48 76.3201C32.1521 84.162 37.234 90.959 44 95.7401C48.2201 98.7227 53.0153 100.793 58.08 101.82C63.0706 102.748 68.1894 102.748 73.18 101.82C78.156 100.978 82.9008 99.1044 87.11 96.3201C93.8 101.54 100.52 106.72 107.21 111.94C99.8889 118.597 90.9642 123.239 81.31 125.41C70.6541 127.915 59.5492 127.795 48.95 125.06C40.567 122.822 32.7368 118.876 25.95 113.47C18.7666 107.767 12.8996 100.58 8.75 92.4001Z"
+                  fill="#319F43"
+                />
+              </svg>
+              Google
+            </Link>
+          </Button>
+          <Button
+            className="bg-transparent hover:bg-transparent border border-[#93cee0] text-[#93cee0] "
+            asChild
+          >
+            <Link href="#">
+              <svg
+                width="128"
+                height="128"
+                viewBox="0 0 128 128"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 mr-3"
+              >
+                <path
+                  d="M116.65 4.83008H11.3601C7.75366 4.83008 4.83008 7.75366 4.83008 11.3601V116.65C4.83008 120.257 7.75366 123.18 11.3601 123.18H116.65C120.257 123.18 123.18 120.257 123.18 116.65V11.3601C123.18 7.75366 120.257 4.83008 116.65 4.83008Z"
+                  fill="#3D5A98"
+                />
+                <path
+                  d="M86.4801 123.17V77.3399H101.86L104.16 59.4799H86.4801V48.0799C86.4801 42.9099 87.9201 39.3799 95.3301 39.3799H104.79V23.3799C100.209 22.9034 95.6057 22.6764 91.0001 22.6999C77.3801 22.6999 68.0001 30.9999 68.0001 46.3099V59.4799H52.6201V77.3399H68.0001V123.17H86.4801Z"
+                  fill="white"
+                />
+              </svg>
+
+              <div>FaceBook</div>
+            </Link>
+          </Button>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button
+          className="bg-transparent hover:bg-transparent border border-[#93cee0] text-[#181919] "
+          asChild
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <Link href="#">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.0502 20.28C16.0702 21.23 15.0002 21.08 13.9702 20.63C12.8802 20.17 11.8802 20.15 10.7302 20.63C9.29016 21.25 8.53016 21.07 7.67016 20.28C2.79016 15.25 3.51016 7.59 9.05016 7.31C10.4002 7.38 11.3402 8.05 12.1302 8.11C13.3102 7.87 14.4402 7.18 15.7002 7.27C17.2102 7.39 18.3502 7.99 19.1002 9.07C15.9802 10.94 16.7202 15.05 19.5802 16.2C19.0102 17.7 18.2702 19.19 17.0402 20.29L17.0502 20.28ZM12.0302 7.25C11.8802 5.02 13.6902 3.18 15.7702 3C16.0602 5.58 13.4302 7.5 12.0302 7.25Z"
+                fill="black"
+              />
+            </svg>
+            Sign In with Apple
+          </Link>
+        </Button>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div>
+          <Button variant={"ghost"}>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clipPath="url(#clip0_129_13)">
+                <path
+                  d="M4 16C4.24493 16 4.48134 16.09 4.66437 16.2527C4.84741 16.4155 4.96434 16.6397 4.993 16.883L5 17V19H7C7.25488 19.0003 7.50003 19.0979 7.68537 19.2728C7.8707 19.4478 7.98223 19.687 7.99717 19.9414C8.01211 20.1958 7.92933 20.4464 7.76574 20.6418C7.60214 20.8373 7.3701 20.9629 7.117 20.993L7 21H5C4.49542 21.0002 4.00943 20.8096 3.63945 20.4665C3.26947 20.1234 3.04284 19.6532 3.005 19.15L3 19V17C3 16.7348 3.10536 16.4804 3.29289 16.2929C3.48043 16.1054 3.73478 16 4 16ZM20 16C20.2652 16 20.5196 16.1054 20.7071 16.2929C20.8946 16.4804 21 16.7348 21 17V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H17C16.7348 21 16.4804 20.8946 16.2929 20.7071C16.1054 20.5196 16 20.2652 16 20C16 19.7348 16.1054 19.4804 16.2929 19.2929C16.4804 19.1054 16.7348 19 17 19H19V17C19 16.7348 19.1054 16.4804 19.2929 16.2929C19.4804 16.1054 19.7348 16 20 16ZM14.8 13.857C14.8933 13.7629 15.0044 13.6882 15.1268 13.6374C15.2492 13.5866 15.3804 13.5606 15.513 13.561C15.6455 13.5614 15.7766 13.5881 15.8987 13.6396C16.0208 13.6911 16.1315 13.7663 16.2243 13.8609C16.317 13.9556 16.3901 14.0677 16.4391 14.1908C16.4882 14.3139 16.5123 14.4455 16.5101 14.578C16.5078 14.7105 16.4792 14.8413 16.426 14.9626C16.3728 15.084 16.2959 15.1936 16.2 15.285C15.0796 16.3861 13.5709 17.0022 12 17C10.4291 17.0022 8.92039 16.3861 7.8 15.285C7.70405 15.1936 7.62723 15.084 7.57401 14.9626C7.52078 14.8413 7.4922 14.7105 7.48995 14.578C7.48769 14.4455 7.51179 14.3139 7.56085 14.1908C7.60991 14.0677 7.68295 13.9556 7.77573 13.8609C7.8685 13.7663 7.97916 13.6911 8.10128 13.6396C8.22339 13.5881 8.35452 13.5614 8.48704 13.561C8.61957 13.5606 8.75084 13.5866 8.87323 13.6374C8.99563 13.6882 9.1067 13.7629 9.2 13.857C9.94658 14.5916 10.9526 15.0023 12 15C13.09 15 14.077 14.565 14.8 13.857ZM8.5 8C8.89782 8 9.27936 8.15804 9.56066 8.43934C9.84196 8.72064 10 9.10218 10 9.5C10 9.89782 9.84196 10.2794 9.56066 10.5607C9.27936 10.842 8.89782 11 8.5 11C8.10218 11 7.72064 10.842 7.43934 10.5607C7.15804 10.2794 7 9.89782 7 9.5C7 9.10218 7.15804 8.72064 7.43934 8.43934C7.72064 8.15804 8.10218 8 8.5 8ZM15.5 8C15.8978 8 16.2794 8.15804 16.5607 8.43934C16.842 8.72064 17 9.10218 17 9.5C17 9.89782 16.842 10.2794 16.5607 10.5607C16.2794 10.842 15.8978 11 15.5 11C15.1022 11 14.7206 10.842 14.4393 10.5607C14.158 10.2794 14 9.89782 14 9.5C14 9.10218 14.158 8.72064 14.4393 8.43934C14.7206 8.15804 15.1022 8 15.5 8ZM7 3C7.26522 3 7.51957 3.10536 7.70711 3.29289C7.89464 3.48043 8 3.73478 8 4C8 4.26522 7.89464 4.51957 7.70711 4.70711C7.51957 4.89464 7.26522 5 7 5H5V7C5 7.26522 4.89464 7.51957 4.70711 7.70711C4.51957 7.89464 4.26522 8 4 8C3.73478 8 3.48043 7.89464 3.29289 7.70711C3.10536 7.51957 3 7.26522 3 7V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H7ZM19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V7C21 7.26522 20.8946 7.51957 20.7071 7.70711C20.5196 7.89464 20.2652 8 20 8C19.7348 8 19.4804 7.89464 19.2929 7.70711C19.1054 7.51957 19 7.26522 19 7V5H17C16.7348 5 16.4804 4.89464 16.2929 4.70711C16.1054 4.51957 16 4.26522 16 4C16 3.73478 16.1054 3.48043 16.2929 3.29289C16.4804 3.10536 16.7348 3 17 3H19Z"
+                  className="bg-transparent hover:bg-transparent border border-[#93cee0] text-[#181919] "
+                  fill="#93cee0"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_129_13">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            Allow FaceID
+          </Button>
+          <Switch />
+        </div>
       </div>
     </main>
   );
