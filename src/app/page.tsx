@@ -7,13 +7,13 @@ import LoginForm from "@/component/global/login-form";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen max-w-[800px] w-full m-auto flex-col items-center justify-between py-24">
       <div>
         <Image src={logo} height={100} width={100} alt="logo" />
       </div>
 
       <LoginForm />
-      <div className="flex flex-col gap-3 items-center">
+      <div className="flex flex-col w-full gap-3 items-center">
         <h3>Create Account</h3>
         <div>Or use the following way to log in</div>
         <div className="flex gap-10 items-center">

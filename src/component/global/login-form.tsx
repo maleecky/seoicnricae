@@ -30,45 +30,75 @@ export default function LoginForm() {
 
   const submitHandler = () => {};
   return (
-    <div className="bg-gray-200 flex justify-center items-center">
-      <div className="  bg-white p-12 w-full">
+    <div className="bg-gray-200 flex justify-center w-full items-center">
+      <div className="  bg-white py-12 w-full">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(submitHandler)}>
-            <FormField
-              control={form.control}
-              name="username"
-              render={() => (
-                <FormItem>
-                  <FormLabel>UserName</FormLabel>
-                  <FormControl>
-                    <Input type="text" placeholder="Username/Phone" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="password"
-              render={() => (
-                <FormItem>
-                  <FormLabel>Password</FormLabel>
-                  <FormControl>
-                    <Input type="password" placeholder="Password" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          <form
+            onSubmit={form.handleSubmit(submitHandler)}
+            className="space-y-8"
+          >
+            <div className="space-y-5">
+              <FormField
+                control={form.control}
+                name="username"
+                render={() => (
+                  <FormItem>
+                    <FormLabel>Username/Phone</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="text"
+                        className="!border-b !p-0 m-0 h-0 rounded-none border-b-[#e6e5e5] border-0"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="password"
+                render={() => (
+                  <FormItem>
+                    <FormLabel>Password</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="password"
+                        className="!border-b !p-0 m-0 h-0 rounded-none border-b-[#e6e5e5] border-0"
+                        placeholder="Password"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button type="submit" variant="outline">
+                <Button
+                  type="submit"
+                  className="w-full bg-[#6A5AFE] hover:bg-[#6a5afe] hover:text-white text-white border-none rounded-none  "
+                  variant="outline"
+                >
                   Login
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px]">
-                <div></div>
+              <DialogContent>
+                <div className="profile-main-loader">
+                  <div className="loader">
+                    <svg className="circular-loader" viewBox="25 25 50 50">
+                      <circle
+                        className="loader-path"
+                        cx="50"
+                        cy="50"
+                        r="20"
+                        fill="none"
+                        stroke="#70c542"
+                        strokeWidth="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </DialogContent>
             </Dialog>
           </form>
