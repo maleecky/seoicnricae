@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen max-w-[680px] w-full m-auto flex-col items-center justify-between py-24">
       <div>
-        <Image src={logo} height={200} width={200} alt="logo" />
+        <Image src={logo} height={150} width={200} alt="logo" />
       </div>
 
       <LoginForm />
