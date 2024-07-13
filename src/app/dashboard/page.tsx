@@ -28,7 +28,7 @@ import vip4Icon from "@/../public/VIP4.png";
 
 const Dashboard = () => {
   return (
-    <div className="relative max-w-[990px] bg-[#F4F2F5] w-full overflow-hidden  mx-auto">
+    <div className="relative  bg-[#F4F2F5] w-full overflow-hidden  ">
       <div>
         <Header />
         <div>
